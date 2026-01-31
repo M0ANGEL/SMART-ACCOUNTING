@@ -105,7 +105,7 @@ function App() {
                     <i className="fas fa-calendar-alt text-primary mt-1 mr-3"></i>
                     <div>
                       <span className="font-medium">Fecha de inicio:</span>
-                      <p className="text-gray-600">7 de Febrero 2024</p>
+                      <p className="text-gray-600">7 de Febrero 2026</p>
                     </div>
                   </div>
                   <div className="flex items-start">
