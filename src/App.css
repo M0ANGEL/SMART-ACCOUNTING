@@ -1,0 +1,24 @@
+/* App.css */
+.bg-primary {
+  background-color: #0F1F33;
+}
+
+.text-primary {
+  color: #00AEEF;
+}
+
+.btn-pago {
+  background-color: #00C853;
+}
+
+.btn-pago:hover {
+  background-color: #00B849;
+}
+
+.payment-method.active {
+  border-color: #00AEEF !important;
+  background-color: #f0f9ff;
+}
+
+/* Añadir estilos para los iconos de Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');

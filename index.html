@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F1F33" />
+    <meta name="description" content="Masterclass en Auditoría Analítica y Power BI" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Masterclass Auditoría Analítica | SMART ACCOUNTING</title>
+    <favicon rel="icon" type="image/png" href="/investment.png" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      #loading {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, #0f1f33 0%, #1e3a8a 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        border-top-color: #0ea5e9;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading-text {
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">Cargando...</div>
+    </div>
+
+    <div id="root"></div>
+
+    <!-- 👇 ESTE ES EL PUNTO CRÍTICO -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            loading.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => (loading.style.display = 'none'), 500);
+          }
+        }, 800);
+      });
+    </script>
+  </body>
+</html>
